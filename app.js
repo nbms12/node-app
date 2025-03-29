@@ -9,7 +9,7 @@ const htmlTemplate = `
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Node.js Web UI Demo</title>
+  <title>Node.js Web UI Demos</title>
   <style>
     body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
     .container { background: #f5f5f5; padding: 20px; border-radius: 8px; }
