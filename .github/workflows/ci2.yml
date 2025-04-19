@@ -2,9 +2,18 @@ name: CI-c
 on: push
 jobs:
   prod-check:
+  
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
       - run: echo "Nice work, $First_Name. Deploying to production server on branch $GITHUB_REF"
         env:
           First_Name: Manju
+
+
+  script-run-job:
+  runs-on: ubuntu-latest
+    steps:
+      - name: Run build script
+        run: ./build.sh
+        shell: bash   
