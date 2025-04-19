@@ -9,11 +9,10 @@ jobs:
       - run: echo "Nice work, $First_Name. Deploying to production server on branch $GITHUB_REF"
         env:
           First_Name: Manju
-
-
-  script-run-job:
-  runs-on: ubuntu-latest
+  run-name:
+	  runs-on: ubuntu-latest
     steps:
-      - name: Run build script
-        run: ./build.sh
-        shell: bash   
+	   - name: Run build script
+       	  run: ./build.sh
+          shell: bash 
+
