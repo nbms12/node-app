@@ -6,7 +6,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Hello World" > file.txt
-      - uses: actions/upload-artifact@v3  # Updated version
+      - name: Clear GitHub Actions Cache
+        run: rm -rf $HOME/.cache/actions
+      - uses: actions/upload-artifact@v3.1.0  # Explicit version
         with:
           name: file
           path: file.txt
@@ -16,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: job_1
     steps:
-      - uses: actions/download-artifact@v3  # Updated version
+      - uses: actions/download-artifact@v3.1.0  # Explicit version
         with:
           name: file
       - run: cat file.txt
